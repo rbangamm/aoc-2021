@@ -10,10 +10,10 @@ object Day3 {
   }
 
   def mostCommon(seq: Seq[String]) : Seq[Int] = {
-    val res = seq.map(_.toCharArray.map(_.toInt - 48))
+    seq.map(_.toCharArray.map(_.toInt - 48))
       .transpose
       .map(_.groupBy(identity).mapValues(_.size))
-    res.map(value => value.filter(_._2 == value.maxBy(_._2)._2))
+      .map(value => value.filter(_._2 == value.maxBy(_._2)._2))
       .map(value => {
         if (value.size == 1) then value.keys.head
         else 1

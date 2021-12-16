@@ -1,3 +1,5 @@
+import input.DataInput
+
 object Day2 {
   def computePartOne : Int = {
     val res = DataInput.fromResource("day2").map(value => {

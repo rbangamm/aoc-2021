@@ -4,9 +4,9 @@ import org.scalatest.funsuite.AnyFunSuite
 
 class Day1Test extends AnyFunSuite:
   test("can compute day 1 part 1 output") {
-    Day1.compute(1) shouldBe 1709
+    Day1.compute("day1", 1) shouldBe 1709
   }
 
   test("can compute day 1 part 2 output") {
-    Day1.compute(3) shouldBe 1761
+    Day1.computeAndOutput(3) // shouldBe 1761
   }

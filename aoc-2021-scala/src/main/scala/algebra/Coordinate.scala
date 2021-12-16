@@ -9,4 +9,4 @@ object Coordinate:
     def toOutput(input: Coordinate): String = s"Answer (Coordinate): (${input.x}, ${input.y})"
 
   given Ordering[Coordinate] with
-    def compare(x: Coordinate, y: Coordinate): Int = compare(x.x, y.x)
+    def compare(x: Coordinate, y: Coordinate): Int = x.x.compare(y.x)
